@@ -1,0 +1,37 @@
+@import 'variables';
+
+//Margin and Padding
+@for $i from 0 through 4{
+    .m#{$i}{margin: #{$i}rem;}
+    .p#{$i}{padding: #{$i}rem;}
+
+    @each $key, $value in $dirs{
+        .m#{$value}-#{$i}{margin-#{$key}: #{$i}rem }
+        .p#{$value}-#{$i}{padding-#{$key}: #{$i}rem }
+    }
+}
+
+//Border
+.border{
+    border-style: solid;
+    border-width: 2px;
+
+}
+
+.border-0{
+    border-style: none !important;
+}
+@each $key, $value in $dirs{
+    .border-#{$key}{
+        border-style: solid;
+        border-width: 0;
+        border-#{$key}-width: 2px
+    }
+
+    .border-#{$key}-0{
+        border-style: solid;
+        border-width: 1px;
+        border-#{$key}-width: 0px
+    }
+}
+

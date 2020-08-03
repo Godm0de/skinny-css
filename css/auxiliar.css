@@ -1,0 +1,12 @@
+.square{
+    display: grid;
+    grid-template-columns: repeat(11,5rem);
+    grid-template-rows: auto;
+    gap: 0.5rem;
+}
+
+.square > div{
+    background-color: aqua; 
+    
+    height: 5rem;
+}
