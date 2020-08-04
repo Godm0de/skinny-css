@@ -11,15 +11,15 @@
 
 @mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
     @include create-media($breakpoint) {
-      &col-#{$modifier}-offset-0 {
+      &.col-#{$modifier}-offset-0 {
         margin-left: 0;
       }
       @for $i from 1 through $grid-cols {
-        &col-#{$modifier}-#{$i} {
+        &.col-#{$modifier}-#{$i} {
           flex:0 0 (100 / $grid-cols * $i) * 1%;
         }
-        &col-#{$modifier}-offset-#{$i} {
-          margin-left: (100 / $grid-cols / $i) * 1%;
+        &.col-#{$modifier}-offset-#{$i} {
+          margin-left: (100 / $grid-cols * $i) * 1%;
         }
       }
     }
