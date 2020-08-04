@@ -2,7 +2,7 @@
 @import '../mixins/base';
 
 .container{
-    max-width: map-get($breackpoints, "md") * 1px;
+    max-width: map-get($breakpoints, "md") * 1px;
     margin: 0 auto;
 }
 
