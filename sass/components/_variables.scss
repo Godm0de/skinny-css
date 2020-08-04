@@ -1,25 +1,87 @@
 
+
+// Variables used for margin and padding
 $dirs: ("top":t, "bottom":b, "left":l, "right":r);
 
-$fonts: ('Monserrat', 'Roboto', 'Open Sans', 'Oswald');
+// Font by default, the font is importet in the file theme
+$font: "Nunito";
 
-$colors-theme: (
-    "primary":#1abc9c,
-    "secondary":#2980b9,
-    "sucess":#2ecc71,
-    "danger":#e74c3c,
-    "warming":#f1c40f,
-    "info":#9b59b6,
-    "light":#ecf0f1,
-    "light-off":#bdc3c7,
-    "dark":#34495e,
-    "dark-off":#2c3e50
+
+// ^^^ THEME SECTION ^^^ 
+
+//Light Theme
+
+// Titles, Subtitles and normal text
+$light-primary:#000000;
+$light-secondary:#9B1CFC;
+$light-text:#000000;
+
+//Background and diferents containers backgrounds
+$light-bg-primary:#FFFFFF;
+$light-bg-panel:#F1F1F1;
+
+//Buttons, alerts, diferents cards, links, etc..
+$light-sucess:#83E85A;
+$light-danger:#FF2727;
+$light-warming:#F9FF21;
+$light-info:#21E6C1; //Links by default
+
+$light:(
+    "primary": $light-primary, 
+    "secondary":$light-secondary, 
+    "text":$light-text, 
+    "bg":$light-bg-primary, 
+    "bg-panel":$light-bg-panel, 
+    "sucess":$light-sucess, 
+    "danger":$light-danger, 
+    "warming":$light-warming,
+    "info":$light-info, 
 );
 
-//Grid System
-$enable-grid-system: true !default;
+
+
+// Dark Theme
+
+// Titles, Subtitles and normal text
+$dark-primary:#43DDE6;
+$dark-secondary:#FC5185;
+$dark-text:#FFFFFF;
+
+//Background and diferents containers backgrounds
+$dark-bg-primary:#253648;
+$dark-bg-panel:#2E435A;
+
+//Buttons, alerts, diferents cards, links, etc..
+$dark-sucess:#83E85A;
+$dark-danger:#FF2727;
+$dark-warming:#F9FF21;
+$dark-info:#21E6C1; //Links by default
+
+$dark: (
+    "primary": $dark-primary, //Headers and titles
+    "secondary":$dark-secondary, //Subtitles and important text
+    "text":$dark-text, //Normal text color
+    "bg":$dark-bg-primary, //Bakground Color
+    "bg-panel":$dark-bg-panel, //Cards color
+    "sucess":$dark-sucess, //Important notifications, buttons, etc
+    "danger":$dark-danger, //Dangerous notifications like errors, buttons, etc
+    "warming":$dark-warming, //Warming notifications, buttons
+    "info":$dark-info, // Mainly links and secondaty information
+);
+
+//Default theme
+$default-theme: $dark;
+
+//Grid System based in flexbox
+$enable-grid-system: true;
 
 $max: 10%;
 $cols-number:12;
 
-$breakpoints: ('xs':0, 'sm': 576, 'md':768, 'lg':992, 'xl':1200);
+$breakpoints: (
+    'xs':0,
+    'sm': 576,
+    'md':768,
+    'lg':992,
+    'xl':1200
+);

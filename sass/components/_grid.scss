@@ -2,8 +2,7 @@
 @import '../mixins/base';
 
 .container{
-    width:100% - $max;
-    max-width: 50rem;
+    max-width: 768 *1px;
     margin: 0 auto;
 }
 
@@ -15,7 +14,6 @@
 .row{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
 }
 
 //Grid columns

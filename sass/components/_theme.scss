@@ -1,0 +1,68 @@
+@import 'variables';
+@import '../mixins/base';
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root{
+    
+    font-family: $font;
+
+    --bg: #{map-get($default-theme, "bg")};
+    --bg-panel:#{map-get($default-theme, "bg-panel")};
+
+    --primary:#{map-get($default-theme, "primary")};
+    --secondary:#{map-get($default-theme, "secondary")};
+    --text:#{map-get($default-theme, "text")};
+
+    --danger:#{map-get($default-theme, "danger")};
+    --warming:#{map-get($default-theme,"warming")};
+    --info:#{map-get($default-theme, "info")};
+
+    body{
+        background-color: var(--bg);
+        color: var(--text);
+
+        p{
+            margin:0.16rem 0;
+        }
+
+            a:link, a:active, a:visited{
+            color:var(--info);
+            }
+        }
+    }
+
+html[theme="dark"]{
+    --bg: #{map-get($dark, "bg")};
+    --bg-panel:#{map-get($dark, "bg-panel")};
+
+    --primary:#{map-get($dark, "primary")};
+    --secondary:#{map-get($dark, "secondary")};
+    --text:#{map-get($dark, "text")};
+
+    --danger:#{map-get($dark, "danger")};
+    --warming:#{map-get($dark,"warming")};
+    --info:#{map-get($dark, "info")};
+}
+
+html[theme="light"]{
+    --bg: #{map-get($light, "bg")};
+    --bg-panel:#{map-get($light, "bg-panel")};
+
+    --primary:#{map-get($light, "primary")};
+    --secondary:#{map-get($light, "secondary")};
+    --text:#{map-get($light, "text")};
+
+    --danger:#{map-get($light, "danger")};
+    --warming:#{map-get($light,"warming")};
+    --info:#{map-get($light, "info")};
+}
+
+@for $i from 1 through 6{
+    @if (($i == 1) or ($i == 2)){
+        h#{$i}{color:var(--primary);margin:0.16rem 0;}
+    }@else{
+        h#{$i}{color:var(--text);margin:0.16rem 0;}
+    }           
+}
+
