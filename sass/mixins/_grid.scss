@@ -1,0 +1,24 @@
+@mixin create-media($breakpoint){
+    @if($breakpoint == 0){
+        @content;
+    }@else{
+        @media screen and (min-width: $breakpoint * 1px){
+            @content;
+        }
+        
+    }
+}
+
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+    @include create-media($breakpoint){
+        @for $i from 1 through $grid-cols {
+            &col-#{$modifier}-#{$i}{
+                flex: 0 0 ((100 * $i)/$cols-number) * 1%;
+            }
+            
+            &col-#{$modifier}-offset-#{$i}{
+                margin-left: ((100 * $i)/$cols-number) * 1%;
+            }
+        }
+    }
+}

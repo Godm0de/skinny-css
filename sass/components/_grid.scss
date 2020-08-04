@@ -1,0 +1,27 @@
+@import 'variables';
+@import '../mixins/base';
+
+.container{
+    width:100% - $max;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.container-fluid{
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+//Grid columns
+@if $enable-grid-system{
+    @each $modifier, $breakpoint in $breakpoints {
+        @include create-col-classes($modifier, $cols-number, $breakpoint);
+    }
+}
+
