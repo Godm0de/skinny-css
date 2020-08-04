@@ -2,12 +2,12 @@
 
 //Margin and Padding
 @for $i from 0 through 4{
-    .m#{$i}{margin: #{$i}rem;}
-    .p#{$i}{padding: #{$i}rem;}
+    &.m#{$i}{margin: #{$i}rem;}
+    &.p#{$i}{padding: #{$i}rem;}
 
     @each $key, $value in $dirs{
-        .m#{$value}-#{$i}{margin-#{$key}: #{$i}rem }
-        .p#{$value}-#{$i}{padding-#{$key}: #{$i}rem }
+        &.m#{$value}-#{$i}{margin-#{$key}: #{$i}rem }
+        &.p#{$value}-#{$i}{padding-#{$key}: #{$i}rem }
     }
 }
 
