@@ -1,15 +1,7 @@
 
-
-// Variables used for margin and padding
-$dirs: ("top":t, "bottom":b, "left":l, "right":r);
-
-// Font by default, the font is importet in the file theme
-$font: "Nunito";
-
-
 // ^^^ THEME SECTION ^^^ 
 
-//Light Theme
+// LIGHT THEME
 
 // Titles, Subtitles and normal text
 $light-primary:#000000;
@@ -38,16 +30,14 @@ $light:(
     "info":$light-info, 
 );
 
-
-
-// Dark Theme
+// DARK THEME
 
 // Titles, Subtitles and normal text
 $dark-primary:#43DDE6;
 $dark-secondary:#FC5185;
 $dark-text:#FFFFFF;
 
-//Background and diferents containers backgrounds
+//Background and differents containers backgrounds
 $dark-bg-primary:#253648;
 $dark-bg-panel:#2E435A;
 
@@ -58,30 +48,57 @@ $dark-warming:#F9FF21;
 $dark-info:#21E6C1; //Links by default
 
 $dark: (
-    "primary": $dark-primary, //Headers and titles
-    "secondary":$dark-secondary, //Subtitles and important text
-    "text":$dark-text, //Normal text color
-    "bg":$dark-bg-primary, //Bakground Color
-    "bg-panel":$dark-bg-panel, //Cards color
-    "sucess":$dark-sucess, //Important notifications, buttons, etc
-    "danger":$dark-danger, //Dangerous notifications like errors, buttons, etc
-    "warming":$dark-warming, //Warming notifications, buttons
-    "info":$dark-info, // Mainly links and secondaty information
+    "primary": $dark-primary, 
+    "secondary":$dark-secondary, 
+    "text":$dark-text, 
+    "bg":$dark-bg-primary, 
+    "bg-panel":$dark-bg-panel,
+    "sucess":$dark-sucess, 
+    "danger":$dark-danger, 
+    "warming":$dark-warming,
+    "info":$dark-info, 
 );
 
-//Default theme
-$default-theme: $dark;
+$default-theme: $dark;  // You can change between light and dark or personalizated
 
-//Grid System based in flexbox
-$enable-grid-system: true;
+// ^^^ GRID SYSTEM FLEXBOX SECTION ^^^ 
 
-$max: 10%;
-$cols-number:12;
+$enable-grid-system: true;  //Flag to enable grid system
+
+$grid-columns:12;   //Columns number
+
+$xs-min-bp:0px;     //Set xs breakpoint min
+$sm-min-bp:576px;   //Set sm breakpoint min
+$md-min-bp:768px;   //Set md breakpoint min
+$lg-min-bp:992px;   //Set lg breakpoint min
+$xl-min-bp:1200px;  //Set xl breakpoint min
 
 $breakpoints: (
-    'xs':0,
-    'sm': 576,
-    'md':768,
-    'lg':992,
-    'xl':1200
+    'xs':$xs-min-bp,
+    'sm':$sm-min-bp,
+    'md':$md-min-bp,
+    'lg':$lg-min-bp,
+    'xl':$xl-min-bp
 );
+
+$content-well-max-width: "none";    // Set the max-width of the content well
+
+$xs-max-ct:100%;    //Set xs container max width
+$sm-max-ct:100%;    //Set sm container max width
+$md-max-ct:720px;   //Set md container max width
+$lg-max-ct:960px;   //Set lg container max width
+$xl-max-ct:1140px;   //Set xl container max width
+
+$containers:(
+    'xs':$xs-max-ct,
+    'sm':$sm-max-ct,
+    'md':$md-max-ct,
+    'lg':$lg-max-ct,
+    'xl':$xl-max-ct
+);
+
+// Variables used for margin and padding
+$dirs: ("top":t, "bottom":b, "left":l, "right":r);
+
+// Font by default, the font is importet in the file theme
+$font: "Nunito";

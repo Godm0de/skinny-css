@@ -1,25 +1,29 @@
 @import 'variables';
 @import '../mixins/base';
 
-.container{
-    max-width: map-get($breakpoints, "md") * 1px;
-    margin: 0 auto;
+// Diferents containers by differents screens size
+@each $modifier, $breakpoint in $breakpoints {
+    @include container($modifier, $breakpoint);
 }
 
 .container-fluid{
-    margin: 0 auto;
     max-width: 100%;
+    margin: 0 auto;
 }
 
+//Basic row container
 .row{
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 1px;
+    width: 100%;
 }
 
-//Grid columns
+//Create cols system
 @if $enable-grid-system{
-    @each $modifier, $breakpoint in $breakpoints {
-        @include create-col-classes($modifier, $cols-number, $breakpoint);
+    @each $modifier, $breakpoint in $breakpoints{
+        @include make-col($grid-columns, $modifier, $breakpoint);
     }
 }
 
