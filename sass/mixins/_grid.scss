@@ -10,46 +10,56 @@
     }
 }
 
-// Mixin to create automatic responsive containers
+// Responsive container
 @mixin container($modifier, $breakpoint) {
   @include media-query($breakpoint) {
     .container{max-width: map-get($containers, $modifier);margin:0 auto}
   } 
 }
 
-//Mixin to create offset
-@mixin make-offset($grid-columns, $modifier, $col-number){
-    &.offset-#{$modifier}-#{$col-number}{margin-left: percentage($col-number/$grid-columns);}
+// Components inside .row can be aligned horizontally
+@mixin make-horizontal-alignment($modifier, $breakpoint) {
+  .start-#{$modifier}{justify-content: flex-start;}
+  .center-#{$modifier}{justify-content: center;}
+  .end-#{$modifier}{justify-content: flex-end;}
 }
 
-//Mixin to create columns
-@mixin make-col($grid-columns, $modifier, $breakpoint) {
+// Components inside .row can be aligned vertically
+@mixin make-vertical-alignment($modifier, $breakpoint) {
+  .top-#{$modifier}{align-content:flex-start;}
+  .middle-#{$modifier}{align-content: center;}
+  .bottom-#{$modifier}{align-content: flex-end;}
+}
+
+// Diferent distributions
+@mixin make-distribution($modifier, $breakpoint) {
+  .around-#{$modifier}{justify-content: space-around;}
+  .space-#{$modifier}{justify-content: space-between;}
+}
+
+// Reverse the components inside .row
+@mixin make-reverse{
+.reverse{flex-direction: row-reverse;}
+}
+
+// MAIN MIXIN! Create whole the grid system based in flexbox 
+@mixin make-grid-system($grid-columns, $modifier, $breakpoint) {
   @include media-query($breakpoint){
     @for $i from 1 through $grid-columns{
-      &.col-#{$modifier}-#{$i}{flex: 0 0 percentage($i/$grid-columns) !important;}
+      &.col-#{$modifier}-#{$i}{
+        flex: 0 0 percentage($i/$grid-columns) !important; 
+        box-sizing: border-box;
+        min-width: auto; 
+      }
 
       @if ($i < $grid-columns){
       &.offset-#{$modifier}-#{$i}{margin-left: percentage($i/$grid-columns);}
       }
     }
+
+    @include make-horizontal-alignment($modifier, $breakpoint);
+    @include make-vertical-alignment($modifier, $breakpoint);
+    @include make-distribution($modifier, $breakpoint);
+    @include make-reverse;
   }
 }
-
-//Mixin to aligment the content
-@mixin make-horizontal-alignment($modifier, $breakpoint) {
-  @include media-query($breakpoint){
-    .start-#{$modifier}{justify-content: flex-start;}
-    .center-#{$modifier}{justify-content: center;}
-    .end-#{$modifier}{justify-content: flex-end;}
-  }
-}
-
-@mixin make-vertical-alignment($modifier, $breakpoint) {
-  @include media-query($breakpoint){
-    .top-#{$modifier}{align-content:flex-start;}
-    .middle-#{$modifier}{align-content: center;}
-    .bottom-#{$modifier}{align-content: flex-end;}
-  }
-}
-
-

@@ -20,11 +20,9 @@
     width: 100%;
 }
 
-//Create cols system and center
+//Most of all system flexbox grid
 @if $enable-grid-system{
     @each $modifier, $breakpoint in $breakpoints{
-        @include make-col($grid-columns, $modifier, $breakpoint);
-        @include make-horizontal-alignment($modifier, $breakpoint);
-        @include make-vertical-alignment($modifier, $breakpoint);
+        @include make-grid-system($grid-columns, $modifier, $breakpoint);
     }
 }

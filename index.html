@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" theme="light">
+<html lang="en" theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,18 @@
     <style>
         .row{
             background-color: lightsalmon;
+            color:black;
         }
+
     </style>
 </head>
 <body>
     
     <div class="container">
+        <div class="row center-xs" style="background-color: transparent;">
+            <h1>Flexbox grid system</h1>
+            
+        </div>
         <h2>Sizes:</h1>
         <div class="row">
             <div class="col-xs-1" style="background-color: lightblue;">1</div>
@@ -57,7 +63,7 @@
         <h2>Wrap test</h2>
         <div class="row">
             <div class="col-xs-6" style="background-color: lightblue;">A</div>
-            <div class="col-xs-7" style="background-color: lightcoral;">B</div>
+            <div class="col-xs-6" style="background-color: lightcoral;">B</div>
         </div>
         
         <h2>Offset test</h2>
@@ -67,16 +73,35 @@
         </div>
 
         <h2>Align Test:</h2>
-        <div class="row">
+        <div class="row start-xs">
             <div class="col-xs-2" style="background-color: lightseagreen">START</div>
         </div>
-        <div class="row">
+        <div class="row center-xs">
             <div class="col-xs-2" style="background-color: lightseagreen">CENTER</div>
         </div>
-        <div class="row">
-            <div class="col-xs-2 end-xs" style="background-color: lightseagreen">END</div>
+        <div class="row end-xs">
+            <div class="col-xs-2" style="background-color: lightseagreen">END</div>
         </div>
-        
+
+        <h2>Distribution</h2>
+        <div class="row around-xs">
+            <div class="col-xs-2" style="background-color: lightgreen;">LEFT</div>
+            <div class="col-xs-2" style="background-color: lightgreen;">CENTER</div>
+            <div class="col-xs-2" style="background-color: lightgreen;"><p>RIGHT</p></div>
+        </div>
+        <div class="row space-xs">
+            <div class="col-xs-2" style="background-color: lightgreen;">LEFT</div>
+            <div class="col-xs-2" style="background-color: lightgreen;">CENTER</div>
+            <div class="col-xs-2" style="background-color: lightgreen;"><p>RIGHT</p></div>
+        </div>
+
+        <h2>Reverse:</h2>
+        <div class="row reverse">
+            <div class="col-xs-2" style="background-color: lightgreen;">1</div>
+            <div class="col-xs-2" style="background-color: lightcoral">2</div>
+            <div class="col-xs-2" style="background-color: lightskyblue;">3</div>
+        </div>
+
     </div>
 </body>
 </html>
