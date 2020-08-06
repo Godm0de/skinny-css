@@ -59,9 +59,9 @@ html[theme="light"]{
 
 @for $i from 1 through 6{
     @if (($i == 1) or ($i == 2)){
-        h#{$i}{color:var(--primary);margin:0.16rem 0;}
+        h#{$i}{color:var(--primary);margin:0.5rem 0;}
     }@else{
-        h#{$i}{color:var(--text);margin:0.16rem 0;}
+        h#{$i}{color:var(--text);margin:0.5rem 0;}
     }           
 }
 

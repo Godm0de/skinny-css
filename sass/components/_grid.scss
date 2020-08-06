@@ -20,10 +20,11 @@
     width: 100%;
 }
 
-//Create cols system
+//Create cols system and center
 @if $enable-grid-system{
     @each $modifier, $breakpoint in $breakpoints{
         @include make-col($grid-columns, $modifier, $breakpoint);
+        @include make-horizontal-alignment($modifier, $breakpoint);
+        @include make-vertical-alignment($modifier, $breakpoint);
     }
 }
-

@@ -17,15 +17,39 @@
   } 
 }
 
+//Mixin to create offset
+@mixin make-offset($grid-columns, $modifier, $col-number){
+    &.offset-#{$modifier}-#{$col-number}{margin-left: percentage($col-number/$grid-columns);}
+}
 
 //Mixin to create columns
 @mixin make-col($grid-columns, $modifier, $breakpoint) {
   @include media-query($breakpoint){
     @for $i from 1 through $grid-columns{
       &.col-#{$modifier}-#{$i}{flex: 0 0 percentage($i/$grid-columns) !important;}
+
+      @if ($i < $grid-columns){
+      &.offset-#{$modifier}-#{$i}{margin-left: percentage($i/$grid-columns);}
+      }
     }
   }
 }
 
+//Mixin to aligment the content
+@mixin make-horizontal-alignment($modifier, $breakpoint) {
+  @include media-query($breakpoint){
+    .start-#{$modifier}{justify-content: flex-start;}
+    .center-#{$modifier}{justify-content: center;}
+    .end-#{$modifier}{justify-content: flex-end;}
+  }
+}
+
+@mixin make-vertical-alignment($modifier, $breakpoint) {
+  @include media-query($breakpoint){
+    .top-#{$modifier}{align-content:flex-start;}
+    .middle-#{$modifier}{align-content: center;}
+    .bottom-#{$modifier}{align-content: flex-end;}
+  }
+}
 
 
