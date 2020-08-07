@@ -13,33 +13,43 @@
 // Responsive container
 @mixin container($modifier, $breakpoint) {
   @include media-query($breakpoint) {
-    .container{max-width: map-get($containers, $modifier);margin:0 auto}
+    &.container{max-width: map-get($containers, $modifier);margin:0 auto}
   } 
 }
 
 // Components inside .row can be aligned horizontally
 @mixin make-horizontal-alignment($modifier, $breakpoint) {
-  .start-#{$modifier}{justify-content: flex-start;}
-  .center-#{$modifier}{justify-content: center;}
-  .end-#{$modifier}{justify-content: flex-end;}
+  &.start-#{$modifier}{justify-content: flex-start;}
+  &.center-#{$modifier}{justify-content: center;}
+  &.end-#{$modifier}{justify-content: flex-end;}
 }
 
 // Components inside .row can be aligned vertically
 @mixin make-vertical-alignment($modifier, $breakpoint) {
-  .top-#{$modifier}{align-content:flex-start;}
-  .middle-#{$modifier}{align-content: center;}
-  .bottom-#{$modifier}{align-content: flex-end;}
+  &.top-#{$modifier}{align-content:flex-start;}
+  &.middle-#{$modifier}{align-content: center;}
+  &.bottom-#{$modifier}{align-content: flex-end;}
 }
 
 // Diferent distributions
 @mixin make-distribution($modifier, $breakpoint) {
-  .around-#{$modifier}{justify-content: space-around;}
-  .space-#{$modifier}{justify-content: space-between;}
+  &.around-#{$modifier}{justify-content: space-around;}
+  &.space-#{$modifier}{justify-content: space-between;}
 }
 
 // Reverse the components inside .row
 @mixin make-reverse{
-.reverse{flex-direction: row-reverse;}
+&.reverse{flex-direction: row-reverse;}
+}
+
+// Hide
+@mixin make-hide($modifier){
+  .hide-#{$modifier}{display: none;}
+}
+
+//Show
+@mixin make-show($modifier){
+  .show-#{$modifier}{display: block;}
 }
 
 // MAIN MIXIN! Create whole the grid system based in flexbox 
