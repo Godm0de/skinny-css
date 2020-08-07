@@ -17,41 +17,6 @@
   } 
 }
 
-// Components inside .row can be aligned horizontally
-@mixin make-horizontal-alignment($modifier, $breakpoint) {
-  &.start-#{$modifier}{justify-content: flex-start;}
-  &.center-#{$modifier}{justify-content: center;}
-  &.end-#{$modifier}{justify-content: flex-end;}
-}
-
-// Components inside .row can be aligned vertically
-@mixin make-vertical-alignment($modifier, $breakpoint) {
-  &.top-#{$modifier}{align-content:flex-start;}
-  &.middle-#{$modifier}{align-content: center;}
-  &.bottom-#{$modifier}{align-content: flex-end;}
-}
-
-// Diferent distributions
-@mixin make-distribution($modifier, $breakpoint) {
-  &.around-#{$modifier}{justify-content: space-around;}
-  &.space-#{$modifier}{justify-content: space-between;}
-}
-
-// Reverse the components inside .row
-@mixin make-reverse{
-&.reverse{flex-direction: row-reverse;}
-}
-
-// Hide
-@mixin make-hide($modifier){
-  .hide-#{$modifier}{display: none;}
-}
-
-//Show
-@mixin make-show($modifier){
-  .show-#{$modifier}{display: block;}
-}
-
 // MAIN MIXIN! Create whole the grid system based in flexbox 
 @mixin make-grid-system($grid-columns, $modifier, $breakpoint) {
   @include media-query($breakpoint){
@@ -67,9 +32,30 @@
       }
     }
 
-    @include make-horizontal-alignment($modifier, $breakpoint);
-    @include make-vertical-alignment($modifier, $breakpoint);
-    @include make-distribution($modifier, $breakpoint);
-    @include make-reverse;
+    &.start-#{$modifier}{justify-content: flex-start;}
+    &.center-#{$modifier}{justify-content: center;}
+    &.end-#{$modifier}{justify-content: flex-end;}
+    &.top-#{$modifier}{align-content:flex-start;}
+    &.middle-#{$modifier}{align-content: center;}
+    &.bottom-#{$modifier}{align-content: flex-end;}
+    &.around-#{$modifier}{justify-content: space-around;}
+    &.space-#{$modifier}{justify-content: space-between;}
+    &.reverse{flex-direction: row-reverse;}
+    &.hide-#{$modifier}{display: none;}
+    &.show-#{$modifier}{display: block;}
+  }
+}
+
+@mixin hide-only-in($modifier, $breakpoint) {
+  @each $key, $value in $breakpoints{
+    @include media-query($value){
+      .hide-#{$modifier}-only{
+        @if($modifier == $key){
+          display: none !important;
+        }@else{
+          display: block !important;
+        }
+      }
+    }
   }
 }

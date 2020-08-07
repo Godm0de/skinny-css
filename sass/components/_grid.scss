@@ -16,8 +16,10 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    box-sizing: border-box;
     margin-top: 1px;
-    width: 100%;
+    max-width: 100%;
+    flex-basis: 0;
 }
 
 //Most of all system flexbox grid
@@ -26,6 +28,11 @@
         @include make-grid-system($grid-columns, $modifier, $breakpoint);
     }
 }
+
+@each $modifier, $breakpoint in $breakpoints{
+    @include hide-only-in($modifier, $breakpoint);
+}
+
 
 .col{
     flex-basis: 0;
