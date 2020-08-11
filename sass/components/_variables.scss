@@ -33,7 +33,7 @@ $light:(
 // DARK THEME
 
 // Titles, Subtitles and normal text
-$dark-primary:#43DDE6;
+$dark-primary:#278ea5;
 $dark-secondary:#FC5185;
 $dark-text:#FFFFFF;
 
@@ -102,3 +102,8 @@ $dirs: ("top":t, "bottom":b, "left":l, "right":r);
 
 // Font by default, the font is importet in the file theme
 $font: "Nunito";
+
+//Navbars
+
+$padding: 5;
+$borders: 10;

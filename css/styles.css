@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
 :root {
   font-family: "Nunito";
   --bg: #253648;
   --bg-panel:#2E435A;
-  --primary:#43DDE6;
+  --primary:#278ea5;
   --secondary:#FC5185;
   --text:#FFFFFF;
   --danger:#FF2727;
@@ -14,20 +14,17 @@
 :root body {
   background-color: var(--bg);
   color: var(--text);
+  margin: 0;
 }
 
 :root body p {
   margin: 0.16rem 0;
 }
 
-:root body a:link, :root body a:active, :root body a:visited {
-  color: var(--info);
-}
-
 html[theme="dark"] {
   --bg: #253648;
   --bg-panel:#2E435A;
-  --primary:#43DDE6;
+  --primary:#278ea5;
   --secondary:#FC5185;
   --text:#FFFFFF;
   --danger:#FF2727;
@@ -1207,5 +1204,99 @@ h6 {
       -ms-flex-positive: 1;
           flex-grow: 1;
   max-width: 100%;
+}
+
+.nav-between, .nav-end, .nav-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: none;
+  padding: 0 10%;
+  color: var(--text);
+}
+
+.nav-between li, .nav-end li, .nav-start li, .nav-between a, .nav-end a, .nav-start a, .nav-between button, .nav-end button, .nav-start button {
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--text);
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.nav-between .logo, .nav-end .logo, .nav-start .logo {
+  cursor: pointer;
+}
+
+.nav-between .nav-links, .nav-end .nav-links, .nav-start .nav-links {
+  list-style: none;
+}
+
+.nav-between .nav-links li, .nav-end .nav-links li, .nav-start .nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav-between .nav-links li a, .nav-end .nav-links li a, .nav-start .nav-links li a {
+  -webkit-transition: all 0,3s ease 0s;
+  transition: all 0,3s ease 0s;
+}
+
+.nav-between .nav-links li a:hover, .nav-end .nav-links li a:hover, .nav-start .nav-links li a:hover {
+  color: var(--primary);
+}
+
+.nav-between button, .nav-end button, .nav-start button {
+  padding: 9px 25px;
+  font-weight: bold;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  -webkit-transition: all 0,3s ease 0s;
+  transition: all 0,3s ease 0s;
+}
+
+.nav-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.nav-end .logo {
+  margin-right: auto;
+}
+
+.nav-end button {
+  margin-left: 30px;
+}
+
+.nav-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.nav-start .logo {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  margin-left: auto;
+}
+
+.nav-start button {
+  margin-left: 30px;
 }
 /*# sourceMappingURL=styles.css.map */

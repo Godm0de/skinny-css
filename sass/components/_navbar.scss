@@ -1,0 +1,93 @@
+@import 'variables';
+
+%navbar{
+    display: flex;
+
+    align-items: center;
+
+    box-sizing: border-box;
+
+    padding: 0;
+    margin:  none;
+
+    padding: 0 10%;
+
+    color:var(--text);
+
+    li, a, button{
+        font-weight: bold;
+        font-size: 16px;
+        color:var(--text);
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
+    .logo{
+        cursor: pointer;
+    }
+
+    .nav-links{
+        list-style: none;
+    }
+
+    .nav-links li{
+        display: inline-block;
+        padding: 0 20px;
+    }
+
+    .nav-links li a{
+        transition: all 0,3s ease 0s;
+    }
+
+    .nav-links li a:hover{
+        color: var(--primary);
+    }
+
+    button{
+        padding: 9px 25px;
+        font-weight: bold;
+        background-color: var(--primary);
+        border:none;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: all 0,3s ease 0s;
+    }
+
+}
+
+.nav-between{
+    @extend %navbar;
+
+    justify-content: space-between;
+}
+
+.nav-end{
+    @extend %navbar;
+
+    justify-content: flex-end;
+
+    .logo{
+        margin-right: auto;
+    }
+
+    button{
+        margin-left: 30px;
+    }
+
+}
+
+.nav-start{
+    @extend %navbar;
+
+    justify-content: flex-start;
+
+    .logo{
+        order:3;
+        margin-left: auto;
+    }
+
+    button{
+        margin-left: 30px;
+    }
+
+}

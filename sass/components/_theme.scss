@@ -1,6 +1,6 @@
 @import 'variables';
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 :root{
     
@@ -20,14 +20,12 @@
     body{
         background-color: var(--bg);
         color: var(--text);
+        margin:0;
 
         p{
             margin:0.16rem 0;
         }
 
-            a:link, a:active, a:visited{
-            color:var(--info);
-            }
         }
     }
 
