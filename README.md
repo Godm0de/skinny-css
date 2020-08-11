@@ -1,5 +1,5 @@
 # skinny-css
-This is my little CSS framework where i implement everything that i learn about sass. I just enjoy making a box with all styles i love about web design and CSS, i doesn't
+This is my little CSS framework where i implement everything that i'm learning about sass. I just enjoy making a box with all styles i love about web design and CSS, i doesn't
 pretend to be something serious.
 
 # Components
