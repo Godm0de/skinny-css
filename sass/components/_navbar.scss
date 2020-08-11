@@ -91,3 +91,43 @@
     }
 
 }
+
+.theme-button{
+    order:3;
+    margin-left: auto;
+
+    position: relative;
+    width: 60px;
+    height: 30px;
+    -webkit-appearance: none;
+    border-radius: 20px;
+    background: $dark-bg-primary;
+    transition: ease-in 0.5s;
+    cursor:pointer;
+    outline: none;
+    box-shadow: saturation($color: #000000);
+
+}
+
+input[class="theme-button"]:checked{
+    background: $light-bg-primary
+}
+
+input[class="theme-button"]:before{
+    content: " ";
+    position: absolute;
+    top:3px;
+    left:3px;
+    background: $light-bg-primary;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+input:checked[class="theme-button"]:before{
+    background-color: $dark-bg-primary;
+    transform: translateX(30px);
+}
+
+

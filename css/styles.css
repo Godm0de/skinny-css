@@ -35,7 +35,7 @@ html[theme="dark"] {
 html[theme="light"] {
   --bg: #FFFFFF;
   --bg-panel:#F1F1F1;
-  --primary:#000000;
+  --primary:#2f89fc;
   --secondary:#9B1CFC;
   --text:#000000;
   --danger:#FF2727;
@@ -1298,5 +1298,47 @@ h6 {
 
 .nav-start button {
   margin-left: 30px;
+}
+
+.theme-button {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  margin-left: auto;
+  position: relative;
+  width: 60px;
+  height: 30px;
+  -webkit-appearance: none;
+  border-radius: 20px;
+  background: #253648;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+  cursor: pointer;
+  outline: none;
+  -webkit-box-shadow: 0%;
+          box-shadow: 0%;
+}
+
+input[class="theme-button"]:checked {
+  background: #FFFFFF;
+}
+
+input[class="theme-button"]:before {
+  content: " ";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background: #FFFFFF;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input:checked[class="theme-button"]:before {
+  background-color: #253648;
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
 }
 /*# sourceMappingURL=styles.css.map */
