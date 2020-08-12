@@ -63,3 +63,10 @@ html[theme="light"]{
     }           
 }
 
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after{
+    transition: all 100ms !important;
+    transition-delay: 0s !important;
+}

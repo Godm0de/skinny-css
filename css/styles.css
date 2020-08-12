@@ -1,78 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
-:root {
-  font-family: "Nunito";
-  --bg: #253648;
-  --bg-panel:#2E435A;
-  --primary:#278ea5;
-  --secondary:#FC5185;
-  --text:#FFFFFF;
-  --danger:#FF2727;
-  --warming:#F9FF21;
-  --info:#21E6C1;
-}
-
-:root body {
-  background-color: var(--bg);
-  color: var(--text);
-  margin: 0;
-}
-
-:root body p {
-  margin: 0.16rem 0;
-}
-
-html[theme="dark"] {
-  --bg: #253648;
-  --bg-panel:#2E435A;
-  --primary:#278ea5;
-  --secondary:#FC5185;
-  --text:#FFFFFF;
-  --danger:#FF2727;
-  --warming:#F9FF21;
-  --info:#21E6C1;
-}
-
-html[theme="light"] {
-  --bg: #FFFFFF;
-  --bg-panel:#F1F1F1;
-  --primary:#2f89fc;
-  --secondary:#9B1CFC;
-  --text:#000000;
-  --danger:#FF2727;
-  --warming:#F9FF21;
-  --info:#21E6C1;
-}
-
-h1 {
-  color: var(--primary);
-  margin: 0.5rem 0;
-}
-
-h2 {
-  color: var(--primary);
-  margin: 0.5rem 0;
-}
-
-h3 {
-  color: var(--text);
-  margin: 0.5rem 0;
-}
-
-h4 {
-  color: var(--text);
-  margin: 0.5rem 0;
-}
-
-h5 {
-  color: var(--text);
-  margin: 0.5rem 0;
-}
-
-h6 {
-  color: var(--text);
-  margin: 0.5rem 0;
-}
-
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -1210,12 +1136,13 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0;
   margin: none;
   padding: 0 10%;
   color: var(--text);
@@ -1254,7 +1181,6 @@ h6 {
 
 .nav-between button, .nav-end button, .nav-start button {
   padding: 9px 25px;
-  font-weight: bold;
   background-color: var(--primary);
   border: none;
   border-radius: 40px;
@@ -1298,6 +1224,90 @@ h6 {
 
 .nav-start button {
   margin-left: 30px;
+}
+
+:root {
+  font-family: "Nunito";
+  --bg: #FFFFFF;
+  --bg-panel:#F1F1F1;
+  --primary:#278ea5;
+  --secondary:#9B1CFC;
+  --text:#000000;
+  --danger:#FF2727;
+  --warming:#F9FF21;
+  --info:#21E6C1;
+}
+
+:root body {
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+}
+
+:root body p {
+  margin: 0.16rem 0;
+}
+
+html[theme="dark"] {
+  --bg: #253648;
+  --bg-panel:#2E435A;
+  --primary:#278ea5;
+  --secondary:#FC5185;
+  --text:#FFFFFF;
+  --danger:#FF2727;
+  --warming:#F9FF21;
+  --info:#21E6C1;
+}
+
+html[theme="light"] {
+  --bg: #FFFFFF;
+  --bg-panel:#F1F1F1;
+  --primary:#278ea5;
+  --secondary:#9B1CFC;
+  --text:#000000;
+  --danger:#FF2727;
+  --warming:#F9FF21;
+  --info:#21E6C1;
+}
+
+h1 {
+  color: var(--primary);
+  margin: 0.5rem 0;
+}
+
+h2 {
+  color: var(--primary);
+  margin: 0.5rem 0;
+}
+
+h3 {
+  color: var(--text);
+  margin: 0.5rem 0;
+}
+
+h4 {
+  color: var(--text);
+  margin: 0.5rem 0;
+}
+
+h5 {
+  color: var(--text);
+  margin: 0.5rem 0;
+}
+
+h6 {
+  color: var(--text);
+  margin: 0.5rem 0;
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+  -webkit-transition: all 100ms !important;
+  transition: all 100ms !important;
+  -webkit-transition-delay: 0s !important;
+          transition-delay: 0s !important;
 }
 
 .theme-button {

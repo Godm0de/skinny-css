@@ -4,7 +4,7 @@
 // LIGHT THEME
 
 // Titles, Subtitles and normal text
-$light-primary:#2f89fc;
+$light-primary:#278ea5;
 $light-secondary:#9B1CFC;
 $light-text:#000000;
 
@@ -59,7 +59,7 @@ $dark: (
     "info":$dark-info, 
 );
 
-$default-theme: $dark;  // You can change between light and dark or personalizated
+$default-theme: $light;  // You can change between light and dark or personalizated
 
 // ^^^ GRID SYSTEM FLEXBOX SECTION ^^^ 
 
