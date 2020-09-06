@@ -17,15 +17,15 @@
     --warming:#{map-get($default-theme,"warming")};
     --info:#{map-get($default-theme, "info")};
 
+
     body{
         background-color: var(--bg);
         color: var(--text);
         margin:0;
 
-        p{
-            margin:0.16rem 0;
-        }
-
+            p{
+                margin:0.16rem 0;
+            }
         }
     }
 

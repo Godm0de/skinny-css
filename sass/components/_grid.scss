@@ -7,7 +7,7 @@
 }
 
 .container-fluid{
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -15,11 +15,13 @@
 .row{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    box-sizing: border-box;
-    margin-top: 1px;
-    max-width: 100%;
+
     flex-basis: 0;
+
+    width: 100%;
+    margin: 0 auto;
+
+    box-sizing: border-box;
 }
 
 //Most of all system flexbox grid
@@ -37,5 +39,6 @@
 .col{
     flex-basis: 0;
     flex-grow: 1;
-    max-width: 100%;
+
+    width: 100%;
 }

@@ -5,10 +5,10 @@
     margin-left: auto;
 
     position: relative;
-    width: 60px;
-    height: 30px;
+    width: 3.75rem;
+    height: 1.875rem;
     -webkit-appearance: none;
-    border-radius: 20px;
+    border-radius:1.25rem;
     background: $dark-bg-primary;
     transition: ease-in 0.5s;
     cursor:pointer;
@@ -24,16 +24,16 @@ input[class="theme-button"]:checked{
 input[class="theme-button"]:before{
     content: " ";
     position: absolute;
-    top:3px;
-    left:3px;
+    top:0.1875rem;
+    left:0.1875rem;
     background: $light-bg-primary;
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
     transition: 0.5s;
 }
 
 input:checked[class="theme-button"]:before{
     background-color: $dark-bg-primary;
-    transform: translateX(30px);
+    transform: translateX(1.875rem);
 }

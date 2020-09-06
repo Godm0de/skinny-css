@@ -1,3 +1,5 @@
+/* NAVBAR STYLES */
+
 %navbar{
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +12,7 @@
 
     color:var(--text);
 
-    li, a, button{
+    .nav-item,.nav-item a, .nav-button{
         font-weight: bold;
         font-size: 16px;
         color:var(--text);
@@ -18,32 +20,33 @@
         box-sizing: border-box;
     }
 
-    .logo{
+    .nav-logo{
         cursor: pointer;
     }
 
-    .nav-links{
+    .nav-items{
         list-style: none;
+        padding:0;
     }
 
-    .nav-links li{
+    .nav-item{
         display: inline-block;
-        padding: 0 20px;
+        padding: 0 1.25rem;
     }
 
-    .nav-links li a{
+    .nav-item a{
         transition: all 0,3s ease 0s;
     }
 
-    .nav-links li a:hover{
-        color: var(--primary);
+    .nav-item a:hover{
+        color:  var(--primary);
     }
 
-    button{
-        padding: 9px 25px;
+    .nav-button{
+        padding: 0.56rem 1.56rem;
         background-color: var(--primary);
         border:none;
-        border-radius: 40px;
+        border-radius: 2.5rem;
         cursor: pointer;
         transition: all 0,3s ease 0s;
     }
@@ -65,8 +68,8 @@
         margin-right: auto;
     }
 
-    button{
-        margin-left: 30px;
+    .nav-button{
+        margin-left: 1.88rem;
     }
 
 }
@@ -81,9 +84,62 @@
         margin-left: auto;
     }
 
-    button{
-        margin-left: 30px;
+    .nav-button{
+        margin-left: 1.88rem;
     }
 
 }
+
+/* Mobile navbar */
+
+/* hamburguer button */
+label.btn-ham,
+label.btn-ham::before,
+label.btn-ham::after{
+
+    position: absolute;
+
+    background-color: var(--text);
+    width: 2rem;
+    height: 0.2rem;
+
+    border-radius: 40px;
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+label.btn-ham::before{
+    content: '';
+    transform: translateY(-0.5rem);
+    -webkit-transform: translateY(-0.5rem);
+}
+
+label.btn-ham::after{
+    content: '';
+    transform: translateY(0.5rem);
+    -webkit-transform: translateY(0.5rem);
+}
+
+#toggle{
+    display: none;
+}
+
+#toggle:checked ~ label.btn-ham::before{
+    transform:rotate(45deg) translate(0px);
+    -webkit-transform: rotate(45deg) translate(0px);
+    transition:0.5s;
+}
+
+#toggle:checked ~ label.btn-ham::after{
+    transform:rotate(-45deg) translate(0px);
+    -webkit-transform: rotate(-45deg) translate(0px);
+    transition:0.5s;
+}
+
+#toggle:checked ~ label.btn-ham{
+    width: 0;
+    transition:0.5s;
+}
+
 
