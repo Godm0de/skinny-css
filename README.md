@@ -6,11 +6,4 @@ pretend to be something serious.
 
 ### Added three stylish navbars inspirated in [Skilldrive](https://www.youtube.com/watch?v=PwWHL3RyQgk) navbars:
 
-.navbar-between
-![alt text](https://github.com/Godm0de/skinny-css/blob/master/img/Nav1.jpeg)
-
-.navbar-center
-![alt text](https://github.com/Godm0de/skinny-css/blob/master/img/Nav2.jpeg)
-
-.navbar-end
-![alt text](https://github.com/Godm0de/skinny-css/blob/master/img/Nav3.jpeg)
+### Added Hamburguer menu
