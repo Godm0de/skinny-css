@@ -1,0 +1,11 @@
+//  Mixin to create media queries
+@mixin media-query($breakpoint){
+    @if($breakpoint == 0){
+             @content;
+    }@else{
+        @media screen and (min-width: $breakpoint){
+            @content;
+        }
+        
+    }
+}

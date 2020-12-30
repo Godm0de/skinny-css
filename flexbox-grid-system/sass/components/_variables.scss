@@ -1,0 +1,42 @@
+// FLEXBOX GRID SYSTEM VARIABLES 
+
+$enable-grid-system: true;  //Flag to enable grid system
+
+//Columns number
+$grid-columns:12;   
+
+// Breakpoints
+$xs-min-bp:0px;
+$sm-min-bp:576px;
+$md-min-bp:768px;
+$lg-min-bp:992px;
+$xl-min-bp:1200px;
+
+$breakpoints: (
+    'xs':$xs-min-bp,
+    'sm':$sm-min-bp,
+    'md':$md-min-bp,
+    'lg':$lg-min-bp,
+    'xl':$xl-min-bp
+);
+
+// Container class variables
+$content-well-max-width: "none";    // Set the max-width of the content well
+
+$xs-max-ct:100%;    
+$sm-max-ct:100%;    
+$md-max-ct:720px;   
+$lg-max-ct:960px;   
+$xl-max-ct:1140px;   
+
+$containers:(
+    'xs':$xs-max-ct,
+    'sm':$sm-max-ct,
+    'md':$md-max-ct,
+    'lg':$lg-max-ct,
+    'xl':$xl-max-ct
+);
+
+// Variables used for margin and padding
+$dirs: ("top":t, "bottom":b, "left":l, "right":r);
+

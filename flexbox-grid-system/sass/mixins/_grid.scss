@@ -1,21 +1,4 @@
-//  Mixin to create media queries
-@mixin media-query($breakpoint){
-    @if($breakpoint == 0){
-             @content;
-    }@else{
-        @media screen and (min-width: $breakpoint){
-            @content;
-        }
-        
-    }
-}
-
-// Responsive container
-@mixin container($modifier, $breakpoint) {
-  @include media-query($breakpoint) {
-    &.container{max-width: map-get($containers, $modifier);margin:0 auto}
-  } 
-}
+@import "media";
 
 // MAIN MIXIN! Create whole the grid system based in flexbox 
 @mixin make-grid-system($grid-columns, $modifier, $breakpoint) {

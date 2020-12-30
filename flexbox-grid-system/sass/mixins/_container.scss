@@ -1,0 +1,9 @@
+@import "media";
+
+// Responsive container
+@mixin container($modifier, $breakpoint) {
+    @include media-query($breakpoint) {
+      &.container{max-width: map-get($containers, $modifier);margin:0 auto}
+    } 
+  }
+  
